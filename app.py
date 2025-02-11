@@ -39,7 +39,8 @@ def video_stream():
             break
         frame = detect_age(frame)
         _, buffer = cv2.imencode('.jpg', frame)
-        yield (b'--frame
+        yield (b'--frame\r\n')
+
 '
                b'Content-Type: image/jpeg
 
